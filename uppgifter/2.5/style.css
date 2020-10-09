@@ -1,0 +1,20 @@
+body{
+    color: white;
+}
+
+.box1{
+    padding: 5ch;
+    background-color: red;
+}
+
+.box2{
+    margin: 1%;
+    background-color: green;
+}
+
+.box3{
+    margin: 10px;
+    background-color: blue;
+    width: 35ch;
+    height: 20ch;
+}
