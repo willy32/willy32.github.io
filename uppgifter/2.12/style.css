@@ -1,0 +1,20 @@
+body{
+    margin: 0%;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+.box{
+    width: 33.33333%;
+    height: 100vh;
+}
+.black{
+    background-color: black;
+}
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
