@@ -1,0 +1,16 @@
+body{
+    margin: 0%;
+}
+.container{
+    display: flex;
+}
+.blue{
+    width: 25%;
+    height: 33.3333333vh;
+    background-color: blue;
+}
+.white{
+    width: 25%;
+    height: 33.3333333vh;
+    background-color: white;
+}
