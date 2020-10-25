@@ -1,0 +1,22 @@
+.button{
+    display: inline-block;
+    background-color: white;
+    color: red;
+    border-color: red;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+.button:hover{
+    display: inline-block;
+    background-color: red;
+    color: white;
+    border-color: red;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
