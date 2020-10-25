@@ -1,0 +1,40 @@
+.button{
+    color: black;
+    background-color: transparent;
+
+    text-decoration: none;
+    
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+/* Colors */
+.button.--red{
+    color: red;
+}
+.button.--red:hover{
+    color: white;
+    background-color: red;
+}
+.button.--green{
+    color: green;
+}
+.button.--green:hover{
+    color: white;
+    background-color: green;
+}
+.button.--blue{
+    color: blue;
+}
+.button.--blue:hover{
+    color: white;
+    background-color: blue;
+}
