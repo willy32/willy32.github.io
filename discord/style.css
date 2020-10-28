@@ -1,0 +1,52 @@
+body{
+    background-image: url("./images/discord_landscape.jpg");
+    margin: 0%;
+}
+.backgroundC{
+    background-image: url("./images/discord_left_corner.png");
+    display: inline-block;
+    width: 815px;
+    height: 819px;
+}
+.loginbox{
+    margin-left: 18.1%;
+    margin-top: 31.1%;
+    background-color: #36393f;
+
+    width: 783px;
+    height: 407px;
+
+    border: #36393f 1px solid;
+    border-radius: 5px;
+
+    display: flex;
+}
+.loginsection{
+    margin: 40px;
+    width: 414px;
+
+    font-family: Arial, Helvetica, sans-serif;   /* Should be Uni Sans Heavy */
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color: white;
+    
+}
+p{
+    color: #a1a3a7;
+}
+button{
+    margin: 0%;
+    background-color: #7289da;
+    width: 100%;
+    border-radius: 7px;
+}
+input{
+    width: 100%;
+    border-radius: 7px;
+}
+form{
+    text-align: left;
+    align-items: center;
+}
