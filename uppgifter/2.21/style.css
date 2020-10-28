@@ -1,0 +1,99 @@
+body{
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.topbar{
+    width: 100%;
+
+    background-color: #222222;
+
+    display: flex;
+    justify-content: center;
+}
+.child{
+    width: 900px;
+    padding-top: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.txtbox{
+    width: max-content;
+}
+h2{
+    color: white;
+    margin: 1px;
+    font-size: 2em;
+}
+p{
+    margin: 1px;
+    color: lightgray;
+    font-size: 1.35em;
+}
+.buttons{
+    color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+.box{
+    padding-top: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.--active{
+    border-bottom: red 5px solid;
+}
+.button{
+    color: lightgray;
+    text-decoration: none;
+    font-size: 1.35em;
+}
+.button:hover{
+    color: white;
+    font-size: 1.50em;
+}
+
+
+
+.profiles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: lightblue;
+    width: 98%;
+    padding: 1%;
+}
+.profile{
+    background-color: whitesmoke;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.imageProfile{
+    background-position: center;
+    background-size: 200%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.--hackerman{
+    background-image: url("https://wompampsupport.azureedge.net/fetchimage?siteId=7575&v=2&jpgQuality=100&width=700&url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F021%2F807%2Fig9OoyenpxqdCQyABmOQBZDI0duHk2QZZmWg2Hxd4ro.jpg");
+}
+.--hackerboi{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQM27XJmMp0YYYKok9S4QrUUJH9cdd8vg2qcw&usqp=CAU");
+    background-size: 100%;
+}
+hr{
+    width: 40%;
+    margin: 30px;
+}
+.description{
+    text-align: center;
+    
+}
