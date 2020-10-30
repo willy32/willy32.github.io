@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5em;
+}
+.banner{
+    height: 300px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./images/workplace.jpg");
+    background-size: 100%;
+    background-position: center;
+
+    position: relative;
+
+    height: 300px;
+}
+.image::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+
+    
+}
+h1{
+    color: white;
+
+    text-shadow: 2px 2px 2px black;
+
+    font-size: 1em;
+    z-index: 1;
+}
+h2{
+    font-size: 0.5em;
+}
+p{
+    font-size: 0.2em;
+}
+.text{
+    margin-left: 10%;
+    margin-right: 10%;
+}
