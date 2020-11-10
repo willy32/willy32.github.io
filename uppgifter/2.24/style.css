@@ -1,0 +1,105 @@
+body{
+    margin: 0px;
+    background-color: rgb(96, 170, 255);
+    font-size: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d7/Baltic_Sea_%28Darlowo%29.JPG");
+    transition: 120ms;
+}
+img{
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 3px black, 2px 2px 2px black;
+    transition: 120ms;
+}
+
+/*Topbar*/
+nav{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 120ms;
+}
+.buttonsTB{
+    display: flex;
+    margin: 0;
+    padding-right: 20px;
+}
+.btnTB{
+    text-decoration: none;
+    color: #3d649e;
+    padding-right: 30px;
+    transition: 120ms;
+}
+.btnTB:hover{
+    text-shadow: 1px 1px 1px lightskyblue;
+}
+.active{
+    text-shadow: 1px 1px 1px aqua;
+    transition: 120ms;
+}
+/**/
+
+/*Main Content*/
+.box{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: min-content;
+    color: #02153f;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0px 0px 50px white;
+    padding: 20px;
+    border: 2px white solid;
+    border-radius: 2px;
+    transition: 120ms;
+}
+main{
+    display: flex;
+    justify-content: left;
+    transition: 120ms;
+}
+main.center{
+    justify-content: center;
+    transition: 120ms;
+}
+.mainImg{
+    background-image: url("./images/water.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
+    content: "";
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px black;
+
+    display: flex;
+    transition: 120ms;
+}
+/**/
+
+/*Footer*/
+footer{
+    color: white;
+    display: flex;
+    transition: 120ms;
+}
+/**/
+
+/*Button*/
+.btn{
+    text-decoration: none;
+    color: red;
+
+    border: currentColor 4px solid;
+    padding: 7px;
+    transition: 170ms;
+}
+.btn:hover{
+    animation: alternate-reverse;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: 170ms;
+}
