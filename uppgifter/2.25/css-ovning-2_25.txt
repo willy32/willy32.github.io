@@ -1,0 +1,35 @@
+JavaScript introduktion
+
+I denna del lär du dig grunderna inom programmering med JavaScript. Jag rekommenderar att du gör övningarna i rätt ordning, dvs. från första till sista.
+
+JavaScript är ett mycket populärt programmeringsspråk som gör det möjligt att skapa interaktiva webbsidor, t.ex. vad som händer då man klickar på knappar, visa interaktiva kartor, 2D/3D spel samt animationer m.m..
+
+* Till skillnad från HTML och CSS kan JavaScript klassas som ett programmeringsspråk.
+* JavaScript förkortas ofta som JS.
+* JavaScript kallas också för ECMAScript.
+* JavaScript är inte samma som programmeringsspråket Java.
+
+-------------------------------
+
+Vad du redan borde veta
+
+Övningarna i denna del förutsätter att du har följande grundläggande bakgrund:
+
+* En allmän förståelse för [Internet: https://sv.wikipedia.org/wiki/Internet] och [World Wide Web (www): https://sv.wikipedia.org/wiki/World_Wide_Web].
+* Bra kunskaper i [HTML: https://sv.wikipedia.org/wiki/HTML] och [CSS: https://sv.wikipedia.org/wiki/Cascading_Style_Sheets].
+
+-------------------------------
+
+Var du hittar mera JavaScript-information
+
+* [JavaScript Referens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference]
+* [W3 JavaScript Tutorial: https://www.w3schools.com/js/DEFAULT.asp]
+
+
+
+=========================
+
+Detta är endast en förklaring och skall inte med på webbsidan:
+
+I texten ovanför syftar [text: url] på en länk:
+<a href="url">text</a>

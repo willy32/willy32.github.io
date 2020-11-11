@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Halant&family=Mrs+Saint+Delafield&display=swap');
+
+
+
+.container{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3em;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 0.8em;
+}
+h3{
+    font-size: 2em;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 0.8em;
+}
+b{
+    font-weight: bold;
+}
+p,li{
+    font-size: 1em;
+    font-family: 'Halant', serif;
+    margin-bottom: 0.8em;
+}
+ul{
+    list-style: circle;
+    margin-left: 2em;
+}
+a{
+    text-decoration: none
+}
+a:hover{
+    text-decoration: underline;
+}
