@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media screen and (min-width: 500px){
+    .d{
+        display: none;
+    }
+    .t{
+        display: block;
+    }
+    .m{
+        display: none;
+    }
+}
+@media screen and (min-width: 900px){
+    .d{
+        display: block;
+    }
+    .t{
+        display: none;
+    }
+    .m{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .d{
+        display: none;
+    }
+    .t{
+        display: none;
+    }
+    .m{
+        display: block;
+    }
+}
