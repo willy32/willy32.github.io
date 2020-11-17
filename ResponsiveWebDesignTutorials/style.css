@@ -2,10 +2,10 @@
     box-sizing: border-box;   
 }
 html{
-    min-height: 100vh;
 }
 body{
     margin: 0%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,6 +19,7 @@ header{
     font-size: 2rem;
     color: white;
     text-align: center;
+    position: sticky;
 }
 
 h1{
@@ -28,6 +29,8 @@ h1{
 main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    
     margin: 20px;
 }
 
@@ -49,9 +52,12 @@ img{
 footer{
     display: flex;
     justify-content: center;
+    position: sticky;
     width: 100%;
     background-color: rgb(19, 32, 56);
     color: white;
+    align-self: flex-end;
+    bottom: 0;
 }
 
 nav{
