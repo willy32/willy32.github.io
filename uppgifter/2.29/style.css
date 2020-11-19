@@ -83,11 +83,10 @@ hr{
     }
     .imgPerson{
         margin: 2%;
-        width: 10% 10%;
     
         border-radius: 3px;
         box-shadow: 1px 1px 1px black;
-        display: none;
+        
     }
     .text{
         margin: 2%;
@@ -100,6 +99,8 @@ hr{
     .container{
         width: 100%;
         min-width: 100px;
+        flex-direction: column;
+        justify-content: center;
     }
     .mainContent{
         margin: 10px;
