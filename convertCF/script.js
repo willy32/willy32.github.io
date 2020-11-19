@@ -4,6 +4,7 @@ function run() {
     convert(document.getElementById("txtCelsius").value);
     
 }
+
 function convert(celsius) {
     var fahrenheit = celsius * 1.8 + 32;
     document.getElementById("output").innerHTML = fahrenheit;
