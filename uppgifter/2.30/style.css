@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #FAFAFA;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+}
+a{
+    color: #774BEF;
+    text-decoration: none;
+    transition: 250ms;
+}
+a:hover{
+    text-decoration: underline;
+    color: #A372FF;
+    transition: 250ms;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+}
+.card{
+    padding: 20px;
+    border: 1px darkgray solid;
+    border-radius: 5px;
+    background-color: white;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.lblLogin{
+    font-size: 0.7em;
+    margin-bottom: 5px;
+}
+.txtBox{
+    padding: 10px;
+    border: 1px lightgrey solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: 250ms;
+}
+.txtBox:focus{
+    border: 1px #774BEF solid;
+    outline: none;
+    box-shadow: 0px 0px 3px #A372FF;
+
+    transition: 250ms;
+}
+.btn{
+    background-color: #774BEF;
+    color: white;
+    padding: 10px;
+    border: 1px transparent solid;
+    border-radius: 5px;
+    margin-left: 125px;
+    transition: 250ms;
+}
+.btn:hover{
+    background-color: #A372FF;
+    transition: 250ms;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        background-color: #FFFFFF;
+    }
+    .card{
+        border: 0px;
+    }
+    h1{
+        text-align: center;
+    }
+}
