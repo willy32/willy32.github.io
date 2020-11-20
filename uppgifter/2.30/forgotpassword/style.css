@@ -29,7 +29,6 @@ a:hover{
     color: #A372FF;
     transition: 250ms;
 }
-
 .container{
     display: flex;
     justify-content: center;
@@ -44,63 +43,7 @@ a:hover{
     border: 1px #DDDDDD solid;
     border-radius: 5px;
     background-color: white;
+
     display: flex;
     flex-direction: column;
-}
-form{
-    display: flex;
-    flex-direction: column;
-}
-.lblLogin{
-    font-size: 0.7em;
-    margin-bottom: 5px;
-}
-.txtBox{
-    padding: 10px;
-    border: 1px lightgrey solid;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    transition: 250ms; width: 100%;
-}
-.txtBox:focus{
-    border: 1px #774BEF solid;
-    outline: none;
-    box-shadow: 0px 0px 3px #A372FF;
-
-    transition: 250ms;
-}
-.btn{
-    background-color: #774BEF;
-    color: white;
-    padding: 10px;
-    border: 1px transparent solid;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border-radius: 5px;
-    margin-left: 125px;
-    transition: 250ms;
-}
-.btn:hover{
-    background-color: #A372FF;
-    transition: 250ms;
-}
-label{
-    font-size: 0.9rem;
-}
-input[type="radio"]{
-    
-}
-
-@media screen and (max-width: 500px){
-    body{
-        background-color: #FFFFFF;
-    }
-    .card{
-        border: 0px;
-    }
-    h1{
-        text-align: center;
-    }
 }
