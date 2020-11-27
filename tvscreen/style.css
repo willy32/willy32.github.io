@@ -1,0 +1,28 @@
+*{
+    box-sizing: content-box;
+}
+body{
+    margin: 0%;
+}
+
+.container{
+    background-color: aqua;
+    width: 1000px;
+    height: 500px;
+
+    position: relative;
+    border: 4px skyblue solid;
+    display: flex;
+}
+
+#image{
+    background-image: url("./dvd.png");
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+
+
+    width: 200px;
+    height: 100px;
+    content: "";
+}
