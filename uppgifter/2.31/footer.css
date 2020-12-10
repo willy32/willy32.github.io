@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header, main{
+    flex-basis: 1;
+}
+.content{
+    position: relative;
+    min-height: 100vh;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+
+    font-size: 30px;
+
+    background-color: #033539;
+}
+.contentLeft .contentRight{
+    font-size: 20px;
+}

@@ -1,0 +1,43 @@
+
+@media screen and (max-width: 480px){
+    .topbar{
+        flex-wrap: wrap;
+        font-size: 1em;
+    }
+
+
+
+
+
+
+    body{
+        
+    }
+    main{
+        
+    }
+    .newscard{
+        width: 100%;
+        min-width: 0px;
+        margin: 0px;
+    }
+
+    .banner{
+        font-size: 100%;
+    }
+
+    .txtCenter{
+        margin: 10px;
+    }
+
+    footer{
+        font-size: 1em;
+    }
+    .contentLeft .contentRight{
+        font-size: 1em;
+    }
+    .contentRight > *{
+        width: 16px;
+    }
+
+}

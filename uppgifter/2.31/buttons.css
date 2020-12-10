@@ -1,0 +1,60 @@
+.btn{
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+
+    transition: 250ms;
+    
+}
+.btn:hover{
+    text-shadow: currentColor 0px 0px 10px;
+    transition: 250ms;
+}
+
+.btn.--white{
+    color: white;
+}
+.btn.--lime{
+    color: lime;
+}
+.btn.--cyan{
+    color: cyan;
+}
+
+.btn.--image.--round{
+    border-radius: 100%;
+}
+.btn.--image.--round:hover{
+    box-shadow: 0px 0px 10px currentColor;
+}
+
+.btnflat{
+    color: black;
+
+    text-decoration: none;
+    border: 2px currentColor solid;
+    padding: 10px;
+
+    letter-spacing: 2px;
+
+    transition: 250ms;
+}
+.btnflat:hover{
+    background-color: black;
+    color: white;
+    
+
+    text-decoration: none;
+    border: 2px currentColor solid;
+    padding: 10px;
+    letter-spacing: 4px;
+
+    transition: 250ms;
+}
+.btnflat.--skyblue{
+    color: white;
+}
+.btnflat.--skyblue:hover{
+    background-color: white;
+    color: skyblue;
+}
