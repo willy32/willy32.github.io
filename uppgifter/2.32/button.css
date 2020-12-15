@@ -1,0 +1,81 @@
+:root{
+    --btnImg-default-width: 64px;
+    --btnImg-default-height: 64px;
+}
+
+
+
+.btn{
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    transform-origin: center center;
+    border-radius: 10px;
+
+    transition: color 300ms;
+}
+
+.btn.--regu{
+    padding: 10px;
+
+    transition: color 300ms;
+}
+.btn.--regu:hover{
+    color: white;
+    background-color: orangered;
+
+    transition: color 300ms;
+}
+.btn.--black{
+    color: black;
+    background-color: transparent;
+
+    transition: color 300ms;
+}
+
+.btn.--active{
+    color: white;
+    background-color: orangered;
+
+    transition: color 300ms;
+}
+
+
+.btn.--img{
+}
+.btnImg.--S{
+    background-position: center center;
+    background-size: 100% 100%;
+    width: calc(var(--btnImg-default-width) / 2);
+    height: calc(var(--btnImg-default-height) / 2);
+
+    transition: color 300ms;
+}
+.btnImg.--M{
+    background-position: center center;
+    background-size: 100% 100%;
+    width: var(--btnImg-default-width);
+    height: var(--btnImg-default-height);
+
+    transition: color 300ms;
+}
+.btnImg:hover{
+    background-position: center center;
+    background-size: 110% 110%;
+
+    transition: color 300ms;
+}
+button{
+    background-color: orangered;
+    color: white;
+    padding: 20px;
+    border: 0px orangered solid;
+    border-radius: 10px;
+    transform-origin: center center;
+    outline: none;
+    transition: padding 300ms;
+}
+button:hover{
+    padding: 22px;
+    transition: padding 300ms;
+}
