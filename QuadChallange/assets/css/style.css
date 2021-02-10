@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+body{
+    
+    margin: 0px;
+    font-size: 1em;
+}
+
+button{
+    font-size: 24px;
+
+    color: white;
+    background-color: #006fff;
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+    letter-spacing: 0px;
+    transition: 200ms;
+}
+button:hover{
+    letter-spacing: 4px;
+    transition: 200ms;
+}
+button.--blue{
+    background-color: #006fff;
+}
+button.--red{
+    background-color: red;
+}
+button.--green{
+    background-color: lime;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+
+    border: red 10px none;
+    padding: 10px;
+}
+.game > div{
+    margin: 10px;
+}
+.buttons{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.textboxes{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#blackjack{
+    height: 600px;
+
+    background-color: #3e9173;
+    border: rgb(85, 0, 0) 5px solid;
+    border-radius: 40px;
+}
+.blackjackGame{
+    flex-grow: 1;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.dealer{
+
+}
+.player{
+
+}
+#dCard2{
+    
+}
+.card{
+    flex-shrink: 1;
+}

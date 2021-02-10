@@ -1,0 +1,26 @@
+button.btn{
+    font-size: 1.5rem;
+    background-color: white;
+
+    border: currentColor 2px solid;
+    border-radius: 7px;
+    padding: 5px 10px;
+    transition: letter-spacing 250ms;
+}
+button.btn:hover{
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+button.btn.--skyblue{
+    color: white;
+    background-color: #2c87f0;
+}
+button.btn.--red{
+    color: white;
+    background-color: red;
+}
+button.btn.--green{
+    color: white;
+    background-color: green;
+}

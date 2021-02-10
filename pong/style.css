@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    margin: 0px;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    color: black;
+    background-color: currentColor;
+
+    width: 600px;
+    min-width: 600px;
+    height: 400px;
+    min-height: 400px;
+}
+
+.score{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
+    color: rgb(204, 204, 204);
+}
+
+.player{
+    min-width: 1px;
+    min-height: 75px;
+    position: absolute;
+
+    color: white;
+    background-color: currentColor;
+}
+#player1{
+    left: 10px;
+}
+
+#player2{
+    right: 10px;
+}
+
+.ball{
+    position: absolute;
+
+    color: white;
+    background-color: currentColor;
+
+    min-width: 5px;
+    min-height: 5px;
+}

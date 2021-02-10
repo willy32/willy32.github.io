@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quad Games</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="game" id="ageInDays">
+            <h1>Your age in days!!!</h3>
+
+            <div class="buttons">
+                <button class="--blue" onclick="CalculateAge();">Calculate</button>
+                <button class="--red" onclick="ResetAge();">Reset</button>
+            </div>
+            <div class="textboxes">
+                <input type="number" name="" id="txtAge" placeholder="Age">
+                <input type="text" name="" id="txtDays" readonly>
+            </div>
+        </div>
+        <div class="game" id="blackjack">
+            <div class="blackjackGame">
+                <div class="dealer" id="dealer">
+                    <img src="./assets/images/Cards/cardBack_red4.png" alt="" class="card" id="dCard1">
+                    <img src="./assets/images/Cards/cardBack_red4.png" alt="" class="card" id="dCard2">
+                    <img src="" alt="" class="card" id="dCard3">
+                    <img src="" alt="" class="card" id="dCard4">
+                    <img src="" alt="" class="card" id="dCard5">
+                    <img src="" alt="" class="card" id="dCard6">
+                    <img src="" alt="" class="card" id="dCard7">
+                </div>
+                <div class="player" id="player">
+                    <img src="./assets/images/Cards/cardBack_red4.png" alt="" class="card" id="pCard1">
+                    <img src="./assets/images/Cards/cardBack_red4.png" alt="" class="card" id="pCard2">
+                    <img src="" alt="" class="card" id="pCard3">
+                    <img src="" alt="" class="card" id="pCard4">
+                    <img src="" alt="" class="card" id="pCard5">
+                    <img src="" alt="" class="card" id="pCard6">
+                    <img src="" alt="" class="card" id="pCard7">
+                </div>
+                <h1>TEXT</h1>
+            </div>
+            <div class="buttons">
+                <button onclick="Hit();">Hit</button>
+                <button>Double</button>
+                <button>Split</button>
+                <button>Stand</button>
+                <button class="--green" onclick="Start();">Start</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/age.js"></script>
+    <script src="./assets/js/blackjack.js"></script>
+    <script>ScrambleDecks();</script>
+</body>
+</html>
