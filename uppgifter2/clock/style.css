@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    text-align: center;
+    font-size: 32pt;
+    font-family: 'Orbitron', sans-serif;
+    color: lime;
+
+    padding: 20px;
+    background-color: black;
+
+    border: 5px grey solid;
+    border-radius: 20px;
+}
+.settingsBox{
+    display: flex;
+    justify-content: center;
+
+    margin: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
