@@ -1,0 +1,52 @@
+@keyframes animation{
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: red;
+    }
+}
+@keyframes boxani{
+    0%{
+        top: 0%;
+        left: 0%;
+    }
+    25%{
+        top: 0%;
+        left: 83.167%;
+    }
+    50%{
+        top: 83.167%;
+        left: 83.167%;
+    }
+    75%{
+        top: 83.167%;
+        left: 0%;
+    }
+    100%{
+        top: 0%;
+        left: 0%;
+    }
+}
+
+body{
+    animation: animation 3000ms infinite;
+}
+
+#box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+}
+#box div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+    animation: boxani 2000ms infinite;
+}
