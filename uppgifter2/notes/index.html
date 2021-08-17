@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="addItem">
+            <div><input type="text" id="txtTitle" placeholder="Title"></div>
+            <div><textarea id="txtText" cols="30" rows="10" placeholder="Text"></textarea></div>
+            <button id="btnAddItem">Add Item</button>
+        </div>
+        <div class="header">
+            <h1>Items:</h1>
+            <button id="btnRemoveAll">🗑️</button>
+        </div>
+        <div class="items" id="items">
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

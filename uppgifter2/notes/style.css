@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.container{
+    margin: 50px;
+    max-width: 500px;
+    box-shadow: 2px 2px 5px grey;
+    padding: 50px;
+    width: 80%;
+}
+.addItem{
+    margin-bottom: 20px;
+}
+.addItem *{
+    margin-bottom: 5px;
+    width: 100%;
+}
+#txtText{
+    width: 100%;
+}
+#btnAddItem{
+    height: 40px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+#btnRemoveAll{
+    width: 40px;
+    height: 40px;
+}
