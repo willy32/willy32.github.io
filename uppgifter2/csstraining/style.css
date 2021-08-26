@@ -27,7 +27,7 @@
     align-items: center;
     list-style: none;
 }
-.menu ul li:hover{
+.menu ul li{
     cursor: pointer;
     text-shadow: white 0px 0px 0px;
     transition: 250ms text-shadow;
