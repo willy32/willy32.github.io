@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/login" method="post" id="form">
+        <!--<label for="">-->
+            <p>Username</p>
+            <input type="text" name="user">
+        <!--</label>-->
+        <label for="">
+            <p>E-Mail</p>
+            <input type="email" name="email" id="">
+        </label>
+        <label for="">
+            <p>Password</p>
+            <input type="password" name="password" id="">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <button onclick="FetchText()">Fetch</button>
+        <textarea name="" id="txtText" cols="30" rows="10"></textarea>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

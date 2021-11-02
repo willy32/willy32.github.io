@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+}
+.topbar-1{
+    display: flex;
+    justify-content: end;
+}
+.options{
+    display: flex;
+}
+
+.options div{
+    display: flex;
+    padding: 4px 16px 2px 8px;
+    border-bottom-left-radius: 15px;
+}
+.btnContact{
+    background-color: #BBC04B;
+}
+.btnSearch{
+    background-color: #D1D586;
+    width: 200px;
+}
+.languages{
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+
+.topbar-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 48px;
+    color: black;
+}
+.topbar-2 img{
+    margin-bottom: 16px;
+}
+.topbar-2 nav{
+    display: flex;
+    margin-bottom: 16px;
+    padding: 0px 8px 0px 8px;
+}
+.topbar-2 nav .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+    color: black;
+}
+.topbar-2 nav .item a{
+    text-decoration: none;
+    color: black;
+}
+.topbar-2 nav .item a:hover{
+    text-decoration: underline;
+}
+
+
+.dropdown{
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 20px;
+    padding: 0px;
+    background-color: white;
+}
+.dropdown * {
+    border: 1px #A4AB0F solid;
+    padding: 8px 16px 8px 16px;
+}
+.dropdown:hover{
+    display: flex !important;
+}
+.item1:hover .dropdown{
+    display: flex !important;
+}
+.item2:hover .dropdown{
+    display: flex !important;
+}
+.item3:hover .dropdown{
+    display: flex !important;
+}
+
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+main .image{
+    display: flex;
+    align-items: center;
+    height: 71vh;
+    background-image: url('https://optimaedu.fi/wp-content/uploads/2021/08/Banner_Framsida-aug.2021-1600x1200.jpg');
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 30px 30px 1000px black inset;
+    
+}
+main .image .title{
+    margin-left: 50px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 6rem;
+}
+
+.item-a{
+    grid-area: item-a;
+    background-color: #F77E10;
+}
+.item-b{
+    grid-area: item-b;
+    background-color: #F8973F;
+}
+.item-c{
+    grid-area: item-c;
+    background-color: #FAAB63;
+}
+.item-d{
+    grid-area: item-d;
+    background-color: #FCCB9F;
+}
+.item-e{
+    grid-area: item-e;
+    background-color: #FDDEC3;
+}
+
+main .grid{
+    display: grid;
+    height: 15vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+    grid-template-areas: 
+    "item-a item-b item-c"
+    "item-d item-e .";
+}
+
+main .grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25rem;
+}

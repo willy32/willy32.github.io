@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    display: flex;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin: 0px;
+}
+
+#game{
+    display: block;
+    background-color: black;
+    cursor: crosshair;
+}
+
+#score{
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    text-shadow: 0px 0px 2px white;
+    position: absolute;
+    font-size: 50px;
+
+    left: 50%;
+    top: 40px;
+}
+#score:hover{
+    cursor: crosshair;
+}
+
+#leaderboard{
+    text-shadow: 0px 0px 1px white;
+    position: absolute;
+    font-size: 25px;
+
+    left: 1%;
+    top: 1%;
+}
+
+#personalbest{
+    text-align: right;
+    text-shadow: 0px 0px 1px white;
+    position: absolute;
+    font-size: 25px;
+
+    right: 1%;
+    top: 1%;
+}
