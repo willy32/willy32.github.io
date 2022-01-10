@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Outfit:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100vh;
+
+    background-color: #161616;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+}
+.container img{
+    height: 10rem;
+
+    transition: 250ms rotate;
+}
+.container img:hover{
+    height: 10rem;
+    transition: 250ms rotate;
+    rotate: -30deg;
+    cursor: pointer;
+}
+.red{
+    color: red;
+    text-shadow: red 0px 0px 4px;
+}
+.green{
+    color: lime;
+    text-shadow: lime 0px 0px 4px;
+}
+#myChart{
+    max-width: 600px;
+    max-height: 400px;
+}
