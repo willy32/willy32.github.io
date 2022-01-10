@@ -15,10 +15,6 @@ app.use(express.urlencoded({
 
 io.on('connection', (socket) => {
     console.log("A user connected");
-    socket.on('chat_message', (msg) => {
-        console.log(msg);
-        io.emit("message",msg);
-    });
 });
 
 server.listen(port, () => console.log("Listening on port " + port));
