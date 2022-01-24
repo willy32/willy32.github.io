@@ -27,7 +27,7 @@ let loopOn = true;
 let currentLevel = levels[0];
 console.log("Level Selected: " + 0 + " - " + currentLevel.levelName);
 let player = new GolfBall(50, 50, 0, 0, 3.19, 10, 10, "red", "Willy", []);
-let wall = new Wall(25, 300, 100, 25, 0, 0, "black", [player]);
+let wall = new Wall(300, 300, 100, 100, 0, 0, "black", [player]);
 
 let lastfps = 0;
 
@@ -52,6 +52,8 @@ function Draw(context){
     player.Draw(context);
     wall.Draw(context);
 
+
+    // Draws Aim
     if(mouse.left /*&& player.vX == 0 && player.vY == 0*/){
         context.beginPath();
         context.arc(mouse.cx, mouse.cy, player.r, 0, Math.PI * 2, false);

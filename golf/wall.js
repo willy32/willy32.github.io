@@ -13,12 +13,31 @@ class Wall{
     Update(){
         this.checkCollition.forEach((target, index) => {
             if(
-                target.y + target.r > this.y &&
-                target.y - target.r < this.y + this.h &&
+                target.y + target.r >= this.y &&
+                target.y + target.r < this.y + this.h &&
                 target.x + target.r > this.x &&
                 target.x - target.r < this.x + this.w
                 ){
-                target.vY *= -1;
+                    target.y = this.y - target.r;
+                    target.vY *= -1;
+            }
+            else if(
+                target.y - target.r <= this.y + this.h &&
+                target.y - target.r > this.y &&
+                target.x + target.r > this.x &&
+                target.x - target.r < this.x + this.w
+                ){
+                    target.y = this.y + target.r + this.h;
+                    target.vY *= -1;
+            }
+            else if(
+                target.x + target.r >= this.x &&
+                target.x + target.r < this.x + this.w &&
+                target.y + target.r > this.y &&
+                target.y - target.r < this.y + this.h
+                ){
+                    target.x = this.x - target.r;
+                    target.vX *= -1;
             }
         });
     }

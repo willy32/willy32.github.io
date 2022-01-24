@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Book World</h1>
+    <h3>Add Book</h3>
+    <form action="/addBook" method="post">
+        <input type="text" name="txtTitle" placeholder="Book Title">
+        <input type="text" name="txtAuthor" placeholder="Book Author">
+        <input type="number" name="txtPages" placeholder="Pages">
+        <button type="submit">Add</button>
+    </form>
+    <h3>Delete Book</h3>
+    <form action="/deleteBook" method="post">
+        <input type="text" name="txtTitle" placeholder="Book Title">
+        <button type="submit">Delete</button>
+    </form>
+    <h3>Update Book</h3>
+    <form action="/updateBook" method="post">
+        <input type="text" name="txtTitle" placeholder="Book Title">
+
+        <input type="text" name="txtNewTitle" placeholder="New Book Title">
+        <input type="text" name="txtNewAuthor" placeholder="New Book Author">
+        <input type="number" name="txtNewPages" placeholder="Nes Pages">
+        <button type="submit">Update</button>
+    </form>
+    <div id="boxBooks">
+
+    </div>
 
     <script src="./app.js"></script>
 </body>
