@@ -1,14 +1,14 @@
 13
-67/home/willy/Documents/willy32.github.io/uppgifter3/training4/app.ts1660288350790615338 0
-83/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js1660288350082623616 0
+67/home/willy/Documents/willy32.github.io/uppgifter3/training4/app.ts1660289380213711252 0
+83/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js1660289379101725679 0
 91/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/training4.3464ddca.js.map1660287167134057086 0
-88/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.3a01df49.css.map1660287803741155302 0
-76/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.html1660288038646090618 0
+88/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.3a01df49.css.map1660289580423106805 0
+76/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.html1660289066441758654 0
 87/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/training4.3464ddca.js1660287167134057086 0
-87/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js.map1660288350082623616 0
-65/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist1660288350082623616 1
+87/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js.map1660289379101725679 0
+65/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist1660289580423106805 1
 74/home/willy/Documents/willy32.github.io/uppgifter3/training4/tsconfig.json1660286884162106699 0
-84/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.3a01df49.css1660287803737155358 0
-70/home/willy/Documents/willy32.github.io/uppgifter3/training4/style.css1660287803677156190 0
-71/home/willy/Documents/willy32.github.io/uppgifter3/training4/index.html1660288038558091537 0
+84/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.3a01df49.css1660289580423106805 0
+70/home/willy/Documents/willy32.github.io/uppgifter3/training4/style.css1660289582847075199 0
+71/home/willy/Documents/willy32.github.io/uppgifter3/training4/index.html1660289133620896752 0
 60/home/willy/Documents/willy32.github.io/uppgifter3/training41660286863862401030 1
