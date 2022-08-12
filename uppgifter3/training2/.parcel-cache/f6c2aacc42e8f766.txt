@@ -1,0 +1,10 @@
+9
+91/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist/training2.3464ddca.js.map1660198056288489524 0
+67/home/willy/Documents/willy32.github.io/uppgifter3/training2/app.ts1660198261371803774 0
+83/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist/index.6b86260e.js1660198259387809827 0
+76/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist/index.html1660198056276489568 0
+87/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist/index.6b86260e.js.map1660198259391809815 0
+65/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist1660198259391809815 1
+87/home/willy/Documents/willy32.github.io/uppgifter3/training2/dist/training2.3464ddca.js1660198056288489524 0
+71/home/willy/Documents/willy32.github.io/uppgifter3/training2/index.html1660197907697082176 0
+60/home/willy/Documents/willy32.github.io/uppgifter3/training21660198056268489597 1
