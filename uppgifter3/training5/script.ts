@@ -1,5 +1,5 @@
 const canvas:HTMLCanvasElement = document.getElementById("game") as HTMLCanvasElement;
-const context:CanvasRenderingContext2D = canvas.getContext("2d");
+const context:CanvasRenderingContext2D = canvas.getContext("2d")!;
 const score:HTMLParagraphElement = document.getElementById("score") as HTMLParagraphElement;
 
 let w:number = window.innerWidth;
