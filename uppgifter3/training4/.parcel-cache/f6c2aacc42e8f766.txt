@@ -3,7 +3,7 @@
 83/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js1660289379101725679 0
 91/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/training4.3464ddca.js.map1660287167134057086 0
 88/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.3a01df49.css.map1660289580423106805 0
-76/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.html1660289066441758654 0
+76/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.html1660298994607138698 0
 87/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/training4.3464ddca.js1660287167134057086 0
 87/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist/index.6b86260e.js.map1660289379101725679 0
 65/home/willy/Documents/willy32.github.io/uppgifter3/training4/dist1660289580423106805 1

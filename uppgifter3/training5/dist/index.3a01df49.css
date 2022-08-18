@@ -1,0 +1,20 @@
+body {
+  justify-content: center;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+canvas {
+  background-color: #000;
+  display: block;
+}
+
+#score {
+  color: #fff;
+  font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
+  font-size: 30px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
