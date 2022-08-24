@@ -1,0 +1,18 @@
+17
+98/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/components/dialog/dialog.css1661151073184887587 0
+97/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/components/dialog/dialog.ts1661151073184887587 0
+87/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/components/dialog1661151073184887587 1
+65/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog41661151109996015895 1
+70/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist1661153882169049222 1
+79/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/tsconfig.json1661151073232887360 0
+88/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist/index.6b815632.js1661151623051140454 0
+81/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist/index.html1661153882169049222 0
+89/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist/index.2cdaf7bc.css1661151110004015707 0
+92/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist/index.6b815632.js.map1661151623051140454 0
+93/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/dist/index.2cdaf7bc.css.map1661151110004015707 0
+80/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/index.html1661153882105050199 0
+78/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/package.json1661151073208887474 0
+69/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src1661151073184887587 1
+79/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/style.css1661151073184887587 0
+76/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/app.ts1661151932595633287 0
+80/home/willy/Documents/willy32.github.io/uppgifter3/dialog/dialog4/src/components1661151073184887587 1

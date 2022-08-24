@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    max-width: 500px;
+
+    background-color: lightgray;
+    padding: 10px;
+    border: 5px gray solid;
+    border-radius: 5px;
+
+    font-size: 2rem;
+}
+.link{
+    color: black;
+    margin: 3px;
+    padding: 5px;
+    border: 3px gray solid;
+    background-color: darkgray;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 250ms;
+}
+.link:hover{
+    padding: 2px;
+    border: 5px gray solid;
+
+    transition: 250ms;
+}
