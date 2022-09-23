@@ -1,0 +1,25 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #3F3F3F;
+
+    width: 50%;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+}
+.card form div{
+    width: 300px;
+}

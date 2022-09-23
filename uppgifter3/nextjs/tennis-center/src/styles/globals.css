@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("../../public/fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: "ubuntu-bold";
+  src: url("../../public/fonts/ubuntu/Ubuntu-Bold.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: ubuntu;
+}
+
+body{
+  color: #202020;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

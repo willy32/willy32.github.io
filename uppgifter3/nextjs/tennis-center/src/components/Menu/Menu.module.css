@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 1.25rem;
+}
+.container > *:not(first){
+    margin-right: 0.5rem;
+
+    text-decoration: none;
+}
+.container > *:hover{
+    text-decoration: underline;
+}

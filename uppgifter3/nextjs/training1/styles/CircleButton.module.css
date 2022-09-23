@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+}
+.circle{
+    display: block;
+
+    border: 3px white solid;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+    background-color: transparent;
+}
