@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("../../public/fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: ubuntu;
+
+  color: #fff;
+  background-color: #151515;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

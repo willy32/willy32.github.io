@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body{
+    @apply bg-white text-black text-2xl font-body;
+    background-color: #efefef;
+  }
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../../public/fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*font-family: ubuntu;*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

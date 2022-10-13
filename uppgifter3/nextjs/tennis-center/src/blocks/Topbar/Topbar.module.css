@@ -10,3 +10,16 @@
     padding: 0 1rem;
     box-shadow: 0px 1px 1px grey;
 }
+.drawerButton{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+@media (max-width: 1000px) {
+    .container > div:not(first){
+        display: none;
+    }
+    .drawerButton{
+        display: block;
+    }
+}

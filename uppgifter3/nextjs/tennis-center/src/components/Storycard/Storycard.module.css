@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 2px black;
+
+    width: 100%;
+
+    color: #fff;
+    
+    padding: 10px;
+}
+.leftside{
+
+}
+.leftside > *{
+    margin: 2px;
+}
+.rightside{
+    
+}

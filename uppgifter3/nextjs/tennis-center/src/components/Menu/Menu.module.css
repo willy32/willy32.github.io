@@ -14,3 +14,23 @@
 .container > *:hover{
     text-decoration: underline;
 }
+
+.vertical{
+    flex-direction: column;
+
+    width: 100vw;
+
+    background-color: #FFD301;
+
+}
+.vertical > *{
+    text-align: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 5px;
+}
+.vertical > *:not(first){
+    border-top: #997d00 1px solid;
+}

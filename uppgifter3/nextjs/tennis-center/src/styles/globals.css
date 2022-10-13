@@ -17,6 +17,9 @@
 
 body{
   color: #202020;
+  background-image: url(../../public/banner_back.jpg);
+  background-position: center;
+  background-size: cover cover;
 }
 
 a {

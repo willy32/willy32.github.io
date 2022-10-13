@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+.container > *:not(:first-child){
+    margin-left: 0.1rem;
+}

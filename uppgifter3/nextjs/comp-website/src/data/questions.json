@@ -1,0 +1,26 @@
+[
+    {
+      "content": "Hur många invånare har Finland?", 
+      "answers": [
+        {"content": "5 miljoner", "isCorrect": false},
+        {"content": "5.5 miljoner", "isCorrect": true},
+        {"content": "6 miljoner", "isCorrect": false}
+      ] 
+    },
+    { 
+      "content": "Hur många invånare har Sverige?", 
+      "answers": [
+        {"content": "8 miljoner", "isCorrect": false}, 
+        {"content": "9 miljoner", "isCorrect": false}, 
+        {"content": "10 miljoner", "isCorrect": true},
+        {"content": "11 miljoner", "isCorrect": false}
+      ] 
+    },
+    { 
+      "content": "Använder javascript en compiler eller interpreter?", 
+      "answers": [
+        {"content": "Interpreter", "isCorrect": true}, 
+        {"content": "Compiler", "isCorrect": false}
+      ] 
+    }
+  ]

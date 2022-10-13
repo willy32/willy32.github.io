@@ -1,8 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Topbar from '../blocks/Topbar/Topbar'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Topbar from '../blocks/Topbar/Topbar';
+import Banner from '../components/Banner/Banner';
+import MainContent from '../components/MainContent/MainContent';
+import styles from '../styles/Home.module.css';
+import bannerImg from "../../public/banner.jpg";
+import Drawer from '@jahlgren/react-drawer';
+import Card from '../components/Card/Card';
+import JBL from "../components/Icons/JBL";
+import HL from "../components/Icons/HL"
+import TKJ from '../components/Icons/TKJ';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +21,21 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Topbar />
-      
+      <MainContent>
+        <Banner img={bannerImg.src}>
+          <h1>Tenniscenter</h1>
+          <h2>Jakobstad</h2>
+          <br />
+          <p>Jakobstad Tenniscenter är ett trävligt och avslappnat centrum för olika bollspel. Den trivsamma hallen är idealisk för tennis och badminton. Det finns två tennisbanor, fem badmintonbanor och pingisborden i hallen. På sommaren finns även en utomhustennisbana. Vid tenniscenter finns ett café och en butik med utrustning.</p>
+          <div style={{display: "flex", flexWrap: "wrap"}}>
+            <JBL />
+            <HL />
+            <TKJ />
+          </div>
+        </Banner>
+      </MainContent>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
