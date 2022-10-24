@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Query from '../../../Query/Query';
+import Query from '../../../_client/components/Query/Query';
 
 type Data = {
     name: string
