@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "title": "Monster 44",
+        "img": "/images/monster44.png",
+        "description": "Monster Energy Drink gives you the boost you need!",
+        "price": 3.00
+    },
+    {
+        "id": 1,
+        "title": "Monster The Doctor",
+        "img": "/images/monsterdoctor.png",
+        "description": "Monster Energy Drink gives you the boost you need!",
+        "price": 3.00
+    },
+    {
+        "id": 2,
+        "title": "Monster Ultra Watermelon",
+        "img": "/images/monsterwatermelon.png",
+        "description": "Monster Energy Drink gives you the boost you need!",
+        "price": 3.00
+    }
+]

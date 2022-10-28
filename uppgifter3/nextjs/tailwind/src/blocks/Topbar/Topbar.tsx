@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
-import Logo from './Logo/Logo'
+import Logo from '../../components/Logo/Logo';
 
 const Topbar = () => {
   return (
-    <div className="p-4 bg-purple-600 bg-opacity-75 flex justify-between items-center w-full">
+    <div className="sm:flex-row flex-col p-4 bg-purple-800 bg-opacity-100 text-white flex flex-wrap justify-between items-center w-full shadow-xl">
         <Logo />
-        <div className="flex space-x-2">
+        <div className="flex space-x-6 text-xl">
             <Link href={"/"}>Home</Link>
             <Link href={"/about"}>About</Link>
-            <Link href={"/contact"}>Contact</Link>
+            <Link href={"/cart"}>Cart</Link>
         </div>
     </div>
   )
