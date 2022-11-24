@@ -386,8 +386,8 @@ function DrawEnemy(enemies){
         let cY = enemies[enemyID].y;
 
         // Player Appearance //
-        context.strokeStyle = enemies[enemyID].color;
-        context.fillStyle = enemies[enemyID].color;
+        context.strokeStyle = "red";
+        context.fillStyle = "red";
         context.font='15px Arial';
 
         // Draws Name //
@@ -461,7 +461,7 @@ function FireGun(){
                 "vX": bullets[bullets.length - 1].vX,
                 "vY": bullets[bullets.length - 1].vY,
                 "r": bullets[bullets.length - 1].r,
-                "color": bullets[bullets.length - 1].color
+                "color": "red"
             }
             SendBulletData(bulletdata);
         }
