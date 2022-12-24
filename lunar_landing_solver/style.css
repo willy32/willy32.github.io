@@ -118,5 +118,9 @@ body{
 
 #lblSolution{
     max-height: 600px;
+    padding: 1rem;
     overflow-y: scroll;
+}
+#lblSolution > *{
+    padding: 0.5rem;
 }

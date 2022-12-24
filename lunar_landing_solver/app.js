@@ -14,6 +14,7 @@ let tempBoard = [
 ];
 
 let memorybank = [];
+let soultions = [];
 class Board{
     constructor(board = [[" ", " ", " ", " ", " "],[" ", " ", " ", " ", " "],[" ", " ", " ", " ", " "],[" ", " ", " ", " ", " "],[" ", " ", " ", " ", " "]], moves = "", generation = 0){
         this.board = JSON.parse(JSON.stringify(board));
@@ -26,11 +27,12 @@ class Board{
 
         if(this.board[this.goalPos.y][this.goalPos.x] == this.playerPiece) this.complete = true;
         if(this.complete){
+            soultions.push(this.moves);
             console.log(this.moves + "done");
-            let node = document.createElement("p");
-            node.innerHTML = this.moves.replaceAll("down", '⬇️').replaceAll("up", '⬆️').replaceAll("left", '⬅️').replaceAll("right", '➡️') + "done";
+            //let node = document.createElement("p");
+            //node.innerHTML = this.moves.replaceAll("down", '⬇️').replaceAll("up", '⬆️').replaceAll("left", '⬅️').replaceAll("right", '➡️') + "done";
 
-            lblSolution.appendChild(node);
+            //lblSolution.appendChild(node);
         }
     }
     GenerateGeneration(){
@@ -188,7 +190,22 @@ function SolveBoard(aboard = [[]]) {
     board.GenerateAllBoards();
     console.log(board);
 
+    PrintSolutions();
+
     console.log(new Date().getTime() - date.getTime());
+}
+function PrintSolutions() {
+    for (let i = 0; i < soultions.length; i++) {
+        soultions[i] = soultions[i].replaceAll("down", '⬇️').replaceAll("up", '⬆️').replaceAll("left", '⬅️').replaceAll("right", '➡️') + "done";
+    }
+    soultions.sort((a, b) => a.length - b.length);
+
+    soultions.forEach((soultion, index) => {
+        console.log(soultion + "done");
+        let node = document.createElement("p");
+        node.innerHTML = (index + 1) + ": " + soultion;
+        lblSolution.appendChild(node);
+    });
 }
 
 documentBoard.addEventListener('click', (eve) => {
