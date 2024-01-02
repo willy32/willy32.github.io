@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL shortener</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+
+            padding-top: 2rem;
+
+            gap: 0.5rem;
+        }
+
+        input{
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px #48b solid;
+            padding: 0.25rem;
+        }
+        input:focus{
+            box-shadow: 0px 0px 2px #48b;
+            outline: none;
+        }
+
+        button{
+            font-size: 1rem;
+
+            border-radius: 5px;
+            border: none;
+            padding: 0.25rem;
+
+            cursor: pointer;
+        }
+        button.red{
+            color: #fff;
+            background-color: #f33;
+
+            transition: background-color 250ms;
+        }
+        button.red:hover{
+            color: #fff;
+            background-color: #f44;
+
+            transition: background-color 250ms;
+        }
+        button.dark-red{
+            color: #fff;
+            background-color: #c22;
+
+            transition: background-color 250ms;
+        }
+        button.dark-red:hover{
+            color: #fff;
+            background-color: #d22;
+
+            transition: background-color 250ms;
+        }
+        button.box{
+            border-radius: 0;
+        }
+
+        table, th, td{
+            border: 1px #888 solid;
+            border-collapse: collapse;
+        }
+
+        #urlList > thead th:not(:last-child){
+            padding: 0.25rem 0.5rem;
+        }
+        .urlItem{
+            height: 40px;
+        }
+        .urlItem > td{
+            display: table-cell;
+            text-align: center;
+            height: 100%;
+
+            padding: 0.5rem 1rem;
+        }
+        .urlItem > td > *{
+            width: 100%;
+            height: 100%;
+        }
+        .urlItem > td:last-child{
+            padding: 0;
+        }
+        .urlItem > .urlComment{
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Add URL</h3>
+    <form action="#" id="frmTimeDate">
+        <input type="time" name="txtTime" required>
+        <input type="date" name="txtDate" required>
+        <input type="text" name="txtPath" required placeholder="Path to HTML File">
+        <input type="text" name="txtComment" placeholder="Comment">
+        <button type="submit">Submit</button>
+    </form>
+
+    <table id="urlList">
+        <thead>
+            <th>URL ID</th>
+            <th>File Path</th>
+            <th>Expire Date</th>
+            <th>Views</th>
+            <th>Comment</th>
+            <th><button id="btnDeleteAll" class="dark-red box">DELETE ALL</button></th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        const frmTimeDate = document.querySelector("#frmTimeDate"); 
+        const urlList = document.querySelector("#urlList").querySelector("tbody");
+        const btnDeleteAll = document.querySelector("#btnDeleteAll");
+
+        const deleteUrl = async (urlId) => {
+            const res = await fetch("/deleteURL", {
+                method: "DELETE",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({urlId: urlId})
+            });
+            const data = await res.json();
+
+            printUrlList();
+        };
+
+        const printUrlList = async () => {
+            urlList.innerHTML = "<p>Loading List...</p>";
+
+            const res = await fetch("/getAllUrls");
+            const data = await res.json();
+            data.reverse();
+            console.log(data);
+            urlList.innerHTML = "";
+
+            if(data.length === 0) urlList.innerHTML = "<p>No URL data was found</p>";
+            data.forEach(url => {
+                const date = new Date(url.expireDate);
+                urlList.innerHTML += `
+                <tr class="urlItem">
+                    <td><a href="/url/${url.urlId}">${url.urlId}</a></td>
+                    <td>${url.file}</td>
+                    <td>${date.getHours()}:${date.getMinutes()} ${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}</td>
+                    <td>${url.viewAmout}</td>
+                    <td class="urlComment">${url.comment}</td>
+                    <td><button class="red box" onclick="deleteUrl('${url.urlId}')">Delete</button></td>
+                </tr>
+                `;
+            });
+        };
+        printUrlList();
+
+        // getUTCTime is used to get the UTC time in milliseconds (Same as Date().getTime() but reutrns the UTC time instead of local time).
+        const getUTCTime = (year=undefined, monthIndex=undefined, date=0, hours=0, minutes=0, seconds=0, ms=0) => {
+            let currentDate = new Date();
+            let resultDate;
+            if(year && monthIndex){
+                let tempDate = new Date(year, monthIndex, date, hours, minutes, seconds, ms);
+                resultDate = new Date(tempDate.getUTCFullYear(), tempDate.getUTCMonth(), tempDate.getUTCDate(), tempDate.getUTCHours(), tempDate.getUTCMinutes(), tempDate.getUTCSeconds(), tempDate.getUTCMilliseconds());
+            }
+            else {
+                resultDate = new Date(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), currentDate.getUTCDate(), currentDate.getUTCHours(), currentDate.getUTCMinutes(), currentDate.getUTCSeconds(), currentDate.getUTCMilliseconds());
+            } 
+            return resultDate.getTime();
+        };
+
+        frmTimeDate.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const year = parseInt(e.target.txtDate.value.split('-')[0]);
+            const monthIndex = parseInt(e.target.txtDate.value.split('-')[1]) - 1;
+            const date = parseInt(e.target.txtDate.value.split('-')[2]);
+            
+            const hours = parseInt(e.target.txtTime.value.split(':')[0]);
+            const minutes = parseInt(e.target.txtTime.value.split(':')[1]);
+
+            fetch("/addURL", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({expireDate: getUTCTime(year, monthIndex, date, hours, minutes), path: e.target.txtPath.value, comment: e.target.txtComment.value})
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                printUrlList();
+            });
+        });
+        btnDeleteAll.addEventListener("click", () => {
+            fetch("/deleteAllURL", {
+                method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                printUrlList();
+            });
+        });
+
+    </script>
+</body>
+</html>

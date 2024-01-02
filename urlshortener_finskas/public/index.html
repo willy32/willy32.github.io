@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL shortener</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+
+            padding-top: 2rem;
+
+            gap: 0.5rem;
+        }
+
+        select{
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px #48b solid;
+            padding: 0.25rem;
+        }
+        input{
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px #48b solid;
+            padding: 0.25rem;
+        }
+        input:focus{
+            box-shadow: 0px 0px 2px #48b;
+            outline: none;
+        }
+
+        button{
+            font-size: 1rem;
+
+            border-radius: 5px;
+            border: none;
+            padding: 0.25rem;
+
+            cursor: pointer;
+        }
+        button.red{
+            color: #fff;
+            background-color: #f33;
+
+            transition: background-color 250ms;
+        }
+        button.red:hover{
+            color: #fff;
+            background-color: #f44;
+
+            transition: background-color 250ms;
+        }
+        button.dark-red{
+            color: #fff;
+            background-color: #c22;
+
+            transition: background-color 250ms;
+        }
+        button.dark-red:hover{
+            color: #fff;
+            background-color: #d22;
+
+            transition: background-color 250ms;
+        }
+        button.box{
+            border-radius: 0;
+        }
+
+        .btnCol{
+            font-size: 1rem;
+
+            padding: 0.25rem;
+
+            cursor: pointer;
+        }
+        .btnCol.red{
+            color: #fff;
+            background-color: #f33;
+
+            transition: background-color 250ms;
+        }
+        .btnCol.red:hover{
+            color: #fff;
+            background-color: #f44;
+
+            transition: background-color 250ms;
+        }
+        .btnCol.dark-red{
+            color: #fff;
+            background-color: #c22;
+
+            transition: background-color 250ms;
+        }
+        .btnCol.dark-red:hover{
+            color: #fff;
+            background-color: #d22;
+
+            transition: background-color 250ms;
+        }
+        .btnCol.blue{
+            color: #fff;
+            background-color: #09f;
+
+            transition: background-color 250ms;
+        }
+        .btnCol.blue:hover{
+            color: #fff;
+            background-color: #0af;
+
+            transition: background-color 250ms;
+        }
+
+        .card{
+
+            max-width: 300px;
+            width: 100%;
+            min-width: 280px;
+
+            border: 1px #888 solid;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .modal{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100vh;
+
+            background-color: rgba(150, 150, 150, 0.8);
+
+            position: fixed;
+            inset: 0;
+        }
+        .modal > *{
+            background-color: #fff;
+
+            box-shadow: 0px 0px 200px #888;
+        }
+        .modal.hidden{
+            display: none;
+        }
+
+        .full-width{
+            width: 100%;
+        }
+        .margin-side{
+            margin: 0 0.25rem;
+        }
+
+        .frmTimeDate{
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+
+            gap: 0.5rem;
+        }
+        .frmTimeDate > div{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .frmTimeDate label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table, th, td{
+            border: 1px #888 solid;
+            border-collapse: collapse;
+        }
+
+        #urlList > thead th:not(:last-child){
+            padding: 0.25rem 0.5rem;
+        }
+        .urlItem{
+            min-height: 40px;
+            height: max-content;
+        }
+        .urlItem > td{
+            display: table-cell;
+            text-align: center;
+            height: max-content;
+
+            padding: 0.5rem 1rem;
+        }
+        .urlItem > td.inactive{
+            background-color: #c22;
+        }
+        .urlItem > .btnViews{
+            color: #0000ee;
+
+            cursor: pointer;
+
+            transition: color 250ms;
+        }
+        .urlItem > .btnViews:hover{
+            color: #2222bb;
+
+            cursor: pointer;
+
+            transition: color 250ms;
+        }
+        .urlItem > .urlComment{
+            max-width: 400px;
+
+            padding: 0;
+        }
+        .urlItem > .urlComment > div{
+            width: 100%;
+
+            padding: 0.5rem 1rem;
+
+            overflow-x: auto;
+        }
+        .urlItem > td > *{
+            width: 100%;
+        }
+
+        #viewsModal{
+            padding: 1rem;
+        }
+        #viewsModal > div{
+            max-height: 800px;
+
+            padding: 1rem;
+
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <!-- Edit modal -->
+    <div class="modal hidden" id="editModal">
+        <form action="#" id="frmEditURL" class="frmTimeDate card">
+            <h3>Edit URL</h3>
+            <input type="text" name="txtUrlId" required disabled>
+            <div>
+                <input type="time" name="txtTime" required>
+                <input type="date" name="txtDate" required>
+            </div>
+            <div>
+                <input type="text" name="txtPath" required placeholder="Path to HTML File" class="full-width">
+            </div>
+            <input type="text" name="txtComment" placeholder="Comment">
+            <input type="email" name="txtEmail" placeholder="E-Mail">
+            <button type="submit">Edit</button>
+            <button type="button" onclick="toggleEditModal()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Views Modal -->
+    <div class="modal hidden" id="viewsModal">
+        <div>
+            <button type="button" onclick="toggleViewsModal()">Close</button>
+            <table>
+                <thead>
+                    <th>View</th>
+                    <th>Time</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h1>URL Shortener</h1>
+    <form action="#" id="frmTimeDate" class="frmTimeDate card">
+        <h3>Add URL</h3>
+        <label for="cmbTime">
+            <span class="margin-side">Quick Select:</span>
+            <select id="cmbTime">
+                <option value="0">Custom</option>
+                <option value="86400000">24h</option>
+                <option value="172800000">48h</option>
+                <option value="259200000">72h</option>
+
+                <option value="604800000">1 week</option>
+                <option value="2592000000">1 month</option>
+                <option value="15552000000">6 months</option>
+                <option value="31536000000">1 year</option>
+            </select>
+        </label>
+        <div>
+            <input type="time" name="txtTime" id="txtTime" required>
+            <input type="date" name="txtDate" id="txtDate" required>
+        </div>
+        <label for="chkTxtPath">
+            <span class="margin-side">Custom Path</span>
+            <input type="checkbox" id="chkTxtPath">
+        </label>
+        <div>
+            <input type="text" name="txtPath" id="txtPathId" required placeholder="Path to HTML File" class="full-width">
+            <select name="txtPath" id="cmbPath" required class="full-width">
+                <option value="vaneri.html">vaneri.html</option>
+                <option value="indexmix.html">indexmix.html</option>
+                <option value="varasto.html">varasto.html</option>
+                <option value="indexV.html">indexV.html</option>
+                <option value="indexK.html">indexK.html</option>
+                <option value="index.html">index.html</option>
+                <option value="index2.html">index2.html</option>
+                <option value="index3.html">index3.html</option>
+                <option value="login3.html">login3.html</option>
+                <option value="tukkulista.html">tukkulista.html</option>
+            </select>
+        </div>
+        <input type="text" name="txtComment" placeholder="Comment">
+        <input type="email" name="txtEmail" placeholder="E-Mail">
+        <button type="submit">Add URL</button>
+    </form>
+
+    <table id="urlList">
+        <thead>
+            <th>URL ID</th>
+            <th>File Path</th>
+            <th>Expire Date</th>
+            <th>Views</th>
+            <th>Comment</th>
+            <th>E-Mail</th>
+            <th id="btnDeleteAll" class="btnCol dark-red" colspan="3">DELETE ALL</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        const editModal = document.querySelector("#editModal");
+        const viewsModal = document.querySelector("#viewsModal");
+        const frmEditURL = document.querySelector("#frmEditURL");
+        const frmTimeDate = document.querySelector("#frmTimeDate");
+        const txtTime = document.querySelector("#txtTime");
+        const txtDate = document.querySelector("#txtDate");
+        const chkTxtPath = document.querySelector("#chkTxtPath");
+        const txtPathId = document.querySelector("#txtPathId");
+        const cmbPath = document.querySelector("#cmbPath");
+        const urlList = document.querySelector("#urlList").querySelector("tbody");
+        const btnDeleteAll = document.querySelector("#btnDeleteAll");
+        const cmbTime = document.querySelector("#cmbTime");
+
+        //#region Makes sure everything looks good from the start
+        if(chkTxtPath.checked){
+            cmbPath.required = false;
+            cmbPath.hidden = true;
+            cmbPath.name = "disabled";
+            txtPathId.required = true;
+            txtPathId.hidden = false;
+            txtPathId.name = "txtPath";
+        }else{
+            cmbPath.required = true;
+            cmbPath.hidden = false;
+            cmbPath.name = "txtPath";
+            txtPathId.required = false;
+            txtPathId.hidden = true;
+            txtPathId.name = "disabled";
+        }
+        //#endregion
+
+        const deleteUrl = async (urlId) => {
+            const res = await fetch("/deleteURL", {
+                method: "DELETE",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({urlId: urlId})
+            });
+            const data = await res.json();
+
+            printUrlList();
+        };
+
+        const resetViews = async (urlId) => {
+            const res = await fetch("/resetViews", {
+                method: "PUT",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({urlId: urlId})
+            });
+            const data = await res.json();
+
+            printUrlList();
+        };
+
+        const toggleEditModal = (urlId="", time="", date="", path="", comment="", email="") => {
+            if(urlId != "" && urlId){
+                editModal.querySelectorAll("input")[0].value = urlId;
+                editModal.querySelectorAll("input")[1].value = time;
+                editModal.querySelectorAll("input")[2].value = date;
+                editModal.querySelectorAll("input")[3].value = path;
+                editModal.querySelectorAll("input")[4].value = comment;
+                editModal.querySelectorAll("input")[5].value = email;
+            }
+
+            if(editModal.classList.contains("hidden")){
+                editModal.classList.remove("hidden");
+            }else{
+                editModal.classList.add("hidden");
+            }
+        };
+
+        const toggleViewsModal = (urlId="") => {
+            const format = (data) => {
+                data = data.toString();
+                if(data.length < 2) data = "0" + data;
+                return data;
+            };
+
+            const viewsTable = viewsModal.querySelector("div").querySelector("table").querySelector("tbody");
+            viewsTable.innerHTML = "";
+
+            if(urlId && urlId != ""){
+                fetch("/getViews/" + urlId, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    data.views.forEach(viewItem => {
+                        const date = new Date(viewItem.time);
+                        viewsTable.innerHTML += `
+                        <tr>
+                            <td>${viewItem.view}</td>
+                            <td>${format(date.getHours())}:${format(date.getMinutes())} ${format(date.getDate())}-${format(date.getMonth() + 1)}-${date.getFullYear()}</td>
+                        </tr>
+                        `;
+                    });
+                });
+            }
+
+            if(viewsModal.classList.contains("hidden")){
+                viewsModal.classList.remove("hidden");
+            }else{
+                viewsModal.classList.add("hidden");
+            }
+        };
+
+        const printUrlList = async () => {
+            urlList.innerHTML = "<p>Loading List...</p>";
+
+            const res = await fetch("/getAllUrls");
+            const data = await res.json();
+            data.reverse();
+            urlList.innerHTML = "";
+
+            const format = (data) => {
+                data = data.toString();
+                if(data.length < 2) data = "0" + data;
+                return data;
+            };
+
+            if(data.length === 0) urlList.innerHTML = "<p>No URL data was found</p>";
+            data.forEach(url => {
+                const date = new Date(url.expireDate);
+                urlList.innerHTML += `
+                <tr class="urlItem">
+                    <td class="${url.active ? "" : "inactive"}"><a href="/url/${url.urlId}">${url.urlId}</a></td>
+                    <td>${url.file}</td>
+                    <td>${format(date.getHours())}:${format(date.getMinutes())} ${format(date.getDate())}-${format(date.getMonth() + 1)}-${date.getFullYear()}</td>
+                    <td class="btnViews" onclick="toggleViewsModal('${url.urlId}')">${url.viewAmout}</td>
+                    <td class="urlComment"><div>${url.comment}</div></td>
+                    <td>${url.email}</td>
+                    <td class="btnCol blue" onclick="resetViews('${url.urlId}')">Reset Views</td>
+                    <td class="btnCol blue" onclick="toggleEditModal('${url.urlId}', '${format(date.getHours())}:${format(date.getMinutes())}', '${date.getFullYear()}-${format(date.getMonth() + 1)}-${format(date.getDate())}', '${url.file}', '${url.comment}', '${url.email}')">Edit</td>
+                    <td class="btnCol red" onclick="deleteUrl('${url.urlId}')">Delete</td>
+                </tr>
+                `;
+            });
+        };
+        printUrlList();
+
+        frmEditURL.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const year = parseInt(e.target.txtDate.value.split('-')[0]);
+            const monthIndex = parseInt(e.target.txtDate.value.split('-')[1]) - 1;
+            const date = parseInt(e.target.txtDate.value.split('-')[2]);
+
+            const hours = parseInt(e.target.txtTime.value.split(':')[0]);
+            const minutes = parseInt(e.target.txtTime.value.split(':')[1]);
+
+            const currentTime = new Date().getTime();
+            const expireTime = new Date(year, monthIndex, date, hours, minutes).getTime();
+            const expireDate = expireTime - currentTime;
+
+            fetch("/editURL", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({urlId: e.target.txtUrlId.value, expireDate: expireDate, path: e.target.txtPath.value, comment: e.target.txtComment.value, email: e.target.txtEmail.value})
+            })
+            .then(res => res.json())
+            .then(data => {
+                toggleEditModal();
+                printUrlList();
+            });
+        });
+
+        frmTimeDate.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const year = parseInt(e.target.txtDate.value.split('-')[0]);
+            const monthIndex = parseInt(e.target.txtDate.value.split('-')[1]) - 1;
+            const date = parseInt(e.target.txtDate.value.split('-')[2]);
+
+            const hours = parseInt(e.target.txtTime.value.split(':')[0]);
+            const minutes = parseInt(e.target.txtTime.value.split(':')[1]);
+
+            const currentTime = new Date().getTime();
+            const expireTime = new Date(year, monthIndex, date, hours, minutes).getTime();
+            const expireDate = expireTime - currentTime;
+
+            fetch("/addURL", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({expireDate: expireDate, path: e.target.txtPath.value, comment: e.target.txtComment.value, email: e.target.txtEmail.value})
+            })
+            .then(res => res.json())
+            .then(data => {
+                printUrlList();
+            });
+        });
+        btnDeleteAll.addEventListener("click", () => {
+            let promptResult = prompt("Are you sure about this? This will remove all URLs!\nType \"CONFIRM\" to complete this action.");
+                if(promptResult === "CONFIRM"){
+                fetch("/deleteAllURL", {
+                    method: "DELETE"
+                })
+                .then(res => res.json())
+                .then(data => {
+                    printUrlList();
+                });
+            }
+        });
+        cmbTime.addEventListener("change", (e) => {
+            const currentTime = new Date().getTime();
+            const date = new Date(currentTime + parseInt(e.currentTarget.value));
+
+            txtTime.value = (date.getHours().toString().length < 2 ? "0" + date.getHours().toString() : date.getHours().toString()) + ":" + (date.getMinutes().toString().length < 2 ? "0" + date.getMinutes().toString() : date.getMinutes().toString()) ;
+            txtDate.value = date.getFullYear().toString() + "-" + (date.getMonth().toString().length < 2 ? "0" + (date.getMonth() +1).toString() : (date.getMonth() + 1).toString()) + "-" + (date.getDate().toString().length < 2 ? "0" + date.getDate().toString() : date.getDate().toString());
+        });
+        // Handles Custom path checkbox
+        chkTxtPath.addEventListener("change", (e) => {
+            if(chkTxtPath.checked){
+                cmbPath.required = false;
+                cmbPath.hidden = true;
+                cmbPath.name = "disabled";
+                txtPathId.required = true;
+                txtPathId.hidden = false;
+                txtPathId.name = "txtPath";
+            }else{
+                cmbPath.required = true;
+                cmbPath.hidden = false;
+                cmbPath.name = "txtPath";
+                txtPathId.required = false;
+                txtPathId.hidden = true;
+                txtPathId.name = "disabled";
+            }
+        });
+    </script>
+</body>
+</html>
